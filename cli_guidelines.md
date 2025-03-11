@@ -25,12 +25,8 @@ The purpose of these guidelines is to assist in creating a consistent experience
 Well-documented, user-friendly CLI tools increase the likelihood of attracting and retaining ROSA customers, as they can readily and confidently manage their infrastructure, reducing the appeal of other options.
 
 ### Measuring the effort  
- 
-
-*   Usability testing - TBD
-*   Analytics - TBD
-
-* * *
+- Usability testing - TBD
+- Analytics - TBD
 
 Naming Conventions
 ------------------
