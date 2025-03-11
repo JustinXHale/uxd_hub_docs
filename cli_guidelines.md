@@ -1,35 +1,3 @@
-Resources
----------
-
-[ROSA CLI Documentation](https://access.redhat.com/documentation/en-us/red_hat_openshift_service_on_aws/4/html-single/rosa_cli/index#rosa-create-objects_rosa-managing-objects-cli "Go to ROSA CLI Documentation")  
-Other
-
-[List of ROSA Flags](https://docs.google.com/spreadsheets/d/1t2dBC5ZClaTqCAJNN2OI4sVxSMc5N0aNG4CP1TB-E7c/edit#gid=1564354721 "Go to List of ROSA Flags")  
-Google doc
-
-[Quick Cluster Creation Prototype](https://www.figma.com/proto/4kQseBVRUxeyhfkGM2FKgY/ROSA-CLI?node-id=18-19&t=IIRkXUSMfRvITXbq-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A299&show-proto-sidebar=1 "Go to Quick Cluster Creation Prototype")  
-Figma
-
-[Amazon v Red Hat Cluster Creation](https://docs.google.com/spreadsheets/d/12ZW3rn-v5uz6x28xPd427T1qC3ZyM-OaqdcBTvFpHEc/edit?gid=0#gid=0 "Go to Amazon v Red Hat Cluster Creation")  
-Google doc
-
-[Miro: ROSA Cluster Creation](https://miro.com/app/board/uXjVNtd_e5M=/ "Go to Miro: ROSA Cluster Creation")  
-Other
-
-[Interactive Mode Help Text for ROSA](https://docs.google.com/spreadsheets/d/1HGaoB8AI4lxIxZcqOK5dyGQRZsCGGcB4K1cmNa4Rui8/edit?gid=125674322#gid=125674322 "Go to Interactive Mode Help Text for ROSA")  
-Google doc
-
-[SIM CLI Guidelines (2021)](https://docs.google.com/document/d/1gN7nXM9HtiZEYqZ6RfbkhXtu_WQbA2FTgT0vWhv7bn8/edit#heading=h.q99q6m7v62uj "Go to SIM CLI Guidelines (2021)")  
-Google doc
-
-[Open Source CLI Guideline Rules](https://clig.dev/ "Go to Open Source CLI Guideline Rules")  
-Other
-
-Additional tags
----------------
-
-[\# cli 2](https://www.uxd-hub.com/entries/tag/cli "View cli results") [\# command line interface 1](https://www.uxd-hub.com/entries/tag/command+line+interface "View command line interface results") [\# rosa 4](https://www.uxd-hub.com/entries/tag/rosa "View rosa results")
-
 Command Line Interface Guidelines (CLI Guidelines)
 ==================================================
 
@@ -361,3 +329,35 @@ Provide a brief description of the flags purpose.
 Indicate if a flag has a default value.
 
 `--version string Sets the ROSA version for the new cluster. (Default is the latest version)`
+
+Resources
+---------
+
+[ROSA CLI Documentation](https://access.redhat.com/documentation/en-us/red_hat_openshift_service_on_aws/4/html-single/rosa_cli/index#rosa-create-objects_rosa-managing-objects-cli "Go to ROSA CLI Documentation")  
+Other
+
+[List of ROSA Flags](https://docs.google.com/spreadsheets/d/1t2dBC5ZClaTqCAJNN2OI4sVxSMc5N0aNG4CP1TB-E7c/edit#gid=1564354721 "Go to List of ROSA Flags")  
+Google doc
+
+[Quick Cluster Creation Prototype](https://www.figma.com/proto/4kQseBVRUxeyhfkGM2FKgY/ROSA-CLI?node-id=18-19&t=IIRkXUSMfRvITXbq-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A299&show-proto-sidebar=1 "Go to Quick Cluster Creation Prototype")  
+Figma
+
+[Amazon v Red Hat Cluster Creation](https://docs.google.com/spreadsheets/d/12ZW3rn-v5uz6x28xPd427T1qC3ZyM-OaqdcBTvFpHEc/edit?gid=0#gid=0 "Go to Amazon v Red Hat Cluster Creation")  
+Google doc
+
+[Miro: ROSA Cluster Creation](https://miro.com/app/board/uXjVNtd_e5M=/ "Go to Miro: ROSA Cluster Creation")  
+Other
+
+[Interactive Mode Help Text for ROSA](https://docs.google.com/spreadsheets/d/1HGaoB8AI4lxIxZcqOK5dyGQRZsCGGcB4K1cmNa4Rui8/edit?gid=125674322#gid=125674322 "Go to Interactive Mode Help Text for ROSA")  
+Google doc
+
+[SIM CLI Guidelines (2021)](https://docs.google.com/document/d/1gN7nXM9HtiZEYqZ6RfbkhXtu_WQbA2FTgT0vWhv7bn8/edit#heading=h.q99q6m7v62uj "Go to SIM CLI Guidelines (2021)")  
+Google doc
+
+[Open Source CLI Guideline Rules](https://clig.dev/ "Go to Open Source CLI Guideline Rules")  
+Other
+
+Additional tags
+---------------
+
+[\# cli 2](https://www.uxd-hub.com/entries/tag/cli "View cli results") [\# command line interface 1](https://www.uxd-hub.com/entries/tag/command+line+interface "View command line interface results") [\# rosa 4](https://www.uxd-hub.com/entries/tag/rosa "View rosa results")
