@@ -1,11 +1,8 @@
 author: Justin X. Hale, Red Hat UXD
 
-# cli-guidelines | UXD Hub
-Command Line Interface Guidelines (CLI Guidelines)
---------------------------------------------------
+# Command Line Interface Guidelines (CLI Guidelines)
 
-Overview
---------
+## Overview
 
 ### UX Goal
 
@@ -32,7 +29,6 @@ Well-documented, user-friendly CLI tools increase the likelihood of attracting a
 * * *
 
 Naming Conventions
-------------------
 
 *   Verb-noun structure command structure (aligns with kubectl)  
      
@@ -51,12 +47,9 @@ Here, the command follows a clear Verb-Noun structure. 'Create' represents the a
 
 Long format naming  
  
-----------------------
-
 Long-form options are named descriptively to indicate their purpose clearly
 
 Example: 
----------
 
 The long-form option is designed to explicitly convey the purpose of enabling autoscaling for a specific cluster or resource.
 
@@ -67,7 +60,6 @@ The long-form option is designed to explicitly convey the purpose of enabling au
 `--assign-admin-privileges`
 
 Short-form option
------------------
 
 *   Consider only using short commands for highly used, top-level commands.
 *   Commands should be 1-2 characters long
@@ -85,7 +77,6 @@ In this instance, 'list-clusters' is a moderately used command, and the -c flag 
 * * *
 
 Help Flag Overview
-------------------
 
 ROSA Help Text Example Doc
 
@@ -110,7 +101,6 @@ ROSA Help Text Example Doc
     *   Passing **\-h** or **\--help** triggers a complete display of help documentation, providing users with an exhaustive explanation of command usage, flags, and additional details.
 
 Help Flag Example
------------------
 
 [List of ROSA Flags](https://docs.google.com/spreadsheets/d/1t2dBC5ZClaTqCAJNN2OI4sVxSMc5N0aNG4CP1TB-E7c/edit?gid=1564354721#gid=1564354721)
 
@@ -119,24 +109,20 @@ Help Flag Example
 * * *
 
 Input
------
 
 Flags
------
 
 _Flags are named parameters, denoted with a hyphen and a single-letter name (-r) or a double hyphen and a multiple-letter name (--recursive). They may or may not also include a user-specified value (--file foo.txt, or --file=foo.txt). The order of flags, generally speaking, does not affect program semantics._
 
 **Flags are preferred to args**. They involve a bit more typing, but make the use of the CLI clearer. This also allows the user to specify the flags in any order, and gives them the confidence that they are running the command correctly. 
 
 Example
--------
 
 `rosa create cluster --name my-cluster`
 
 `rosa create cluster --region us-west-2 --workers 3 --instance-type m5.large --private-link`
 
 Arguments
----------
 
 _Arguments, or args, are positional parameters to a command. For example, the file paths you provide to cp are args. The order of args is often important: cp foo bar means something different from cp bar foo._
 
@@ -149,7 +135,6 @@ _Arguments, or args, are positional parameters to a command. For example, the fi
 * * *
 
 Error Messaging
----------------
 
 *   **Make errors readable for humans**
     *   Ex: “Can't write to file.txt. You might need to make it writable by running ‘<cmd>’”
@@ -165,7 +150,6 @@ Error Messaging
 `Error: Can't write to file.txt. You might need to make it writable by running '<cmd>'`
 
 Corrective messaging
---------------------
 
 While not a substitute for comprehensive error messages, consider implementing auto-correction mechanisms where applicable. Auto-correction features can enhance the user experience by automatically resolving common issues or suggesting corrections:
 
@@ -177,18 +161,15 @@ Interactive Mode
 ----------------
 
 Interactive Prompts
--------------------
 
 Interactive prompts are questions posed to users during command execution in interactive modes. Users have the option to type "?" to access help text related to the specific question, aiding them in making informed decisions.
 
 Features of Interactive Prompts:
---------------------------------
 
 *   **User-Friendly Exploration**: Users can explore available options and get context-specific help during the interaction.
 *   **Question Format**: Each prompt is presented as a question, guiding users to provide necessary information.
 
 Utilizing "?" for Help:
------------------------
 
 **Usage**: Users can type "?" when prompted to display additional help text..
 
@@ -202,38 +183,32 @@ Points to remember:
 *   Provide a unique name for your cluster. This name will be used to create a specific web address for your cluster on openshiftapps.com.: use 
 
 Example Interactive Prompt
---------------------------
 
 `Allows automated deployment and management, streamlining tasks and relieving users from manual control plane handling.<b></b> <b>?</b> <b>Deploy</b> <b>cluster</b> <b>with</b> <b>Hosted</b> <b>Control</b> <b>Plane: [? for help]</b> <b>(y/N)</b>`
 
 Actions that can’t change
--------------------------
 
 *   Example: cluster name
 *   Should we inform the user when the prompt appears?
     *   How does this affect the user when all prompts are shown?
 
 When to add to interactive mode prompts
----------------------------------------
 
 *   Is it a requirement or feature?
 *   Does the user need to complete in order to proceed?
 *   Can it only be added at creation?
 
 Example
--------
 
 [ROSA Quick Cluster Creation Prototype](https://www.figma.com/proto/4kQseBVRUxeyhfkGM2FKgY/ROSA-CLI?node-id=18-19&t=IIRkXUSMfRvITXbq-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A299&show-proto-sidebar=1)
 
 * * *
 
 List
-----
 
 To streamline user experience and ensure clarity, ROSA CLI follows specific guidelines for presenting version information. Prioritizing the default version for immediate user visibility and simplifying the display, this structured format enhances user understanding and navigation.
 
 Version Display Format
-----------------------
 
 *   Prioritize the default version at the top.
 *   Display "Yes" for options where there are only two choices (e.g., "Yes" and "No") for clarity.
@@ -245,7 +220,6 @@ Version Display Format
 * * *
 
 Default values for prompts
---------------------------
 
 Option prompts, where users choose from a list of predefined options, often involve the consideration of default values. This section provides guidelines on how to handle default values for option prompts effectively.
 
@@ -256,20 +230,17 @@ Clarity in Defaults:
 *   Ensure that default values are selected based on meaningful criteria, such as common use or logical defaults.
 
 First in the List:
-------------------
 
 *   Be cautious when selecting the first option in the list as the default value.
 *   In some cases, the first option might not represent a true default but merely the initial entry in the list.
 
 Optional vs. Default:
----------------------
 
 *   Distinguish between prompts that are optional and those with predefined default values.
     *   **Optional** prompts may not have a default value
     *   **Default** values are automatically applied if the user doesn't provide input.
 
 Implementation
---------------
 
 *   Clearly indicate default values:
     *   Square brackets next to the option prompt.
@@ -283,12 +254,10 @@ Implementation
 * * *
 
 Documenting Flags
------------------
 
 Flags play a crucial role in defining the behavior of a command. Proper documentation ensures that users understand each flag's purpose, making the CLI more accessible and user-friendly.
 
 Descriptive Naming
-------------------
 
 *   Choose flag names that clearly convey their purpose.
 *   Prefer long-form flags for better readability and understanding.
@@ -298,7 +267,6 @@ Descriptive Naming
 `--enable-autoscaling`
 
 Short-form Flags:
------------------
 
 *   If providing short-form flags, keep them concise and easy to remember.
 *   Short-form flags are optional but can enhance efficiency.
@@ -328,9 +296,3 @@ Provide a brief description of the flags purpose.
 Indicate if a flag has a default value.
 
 `--version string Sets the ROSA version for the new cluster. (Default is the latest version)`
-
-<<<<<<< HEAD
-* * *
-=======
-* * *
->>>>>>> 55d69df (cli guidelines markdown)
